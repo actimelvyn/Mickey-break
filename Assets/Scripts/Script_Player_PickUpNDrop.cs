@@ -14,7 +14,7 @@ public class Script_Player_PickUpNDrop : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyUp(KeyCode.E))
         {
             if (objectGrabbable == null)
             {
