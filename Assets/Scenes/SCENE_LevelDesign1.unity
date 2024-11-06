@@ -8252,7 +8252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1836538563
 Transform:
   m_ObjectHideFlags: 0
@@ -8519,7 +8519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1871922401
 Transform:
   m_ObjectHideFlags: 0
@@ -8528,13 +8528,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871922400}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.72073174, z: -0, w: 0.6932142}
-  m_LocalPosition: {x: -0.462, y: 1.1947471, z: -2.691}
+  m_LocalRotation: {x: -0, y: -0.87386477, z: -0, w: 0.48616913}
+  m_LocalPosition: {x: -1.345, y: 1.1947471, z: -2.725}
   m_LocalScale: {x: 0.1, y: 2.5, z: 0.75000006}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2055991229}
-  m_LocalEulerAnglesHint: {x: 0, y: -92.23, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -121.822, z: 0}
 --- !u!65 &1871922402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9299,11 +9299,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2055991228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fd0587a5d2975148ae9669213891c46, type: 3}
+  m_Script: {fileID: 11500000, guid: 03059d827e11ccd4f8b378360a454d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   door_closed: {fileID: 874012322}
   door_opened: {fileID: 1871922400}
+  intText: {fileID: 0}
 --- !u!1 &2143225641
 GameObject:
   m_ObjectHideFlags: 0
