@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,41 +6,54 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public GameObject door_closed, door_opened, intText;
-    public AudioSource open, close;
-    public bool opened;
+    //public AudioSource open, close;
+    private bool opened;
+    private bool isPlayerInRange = false;
 
-    void OnTriggerStay(Collider other)
+    private void Start()
     {
-        if (other.CompareTag("MainCamera"))
+        Debug.Log("start");
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
         {
-            if (opened == false)
-            {
-                intText.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    door_closed.SetActive(false);
-                    door_opened.SetActive(true);
-                    intText.SetActive(false);
-                    //open.Play();
-                    StartCoroutine(repeat());
-                    opened = true;
-                }
-            }
+            //intText.SetActive(true);
+            isPlayerInRange =  true;
+            //Debug.Log("Is in range");
         }
     }
+
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("MainCamera"))
         {
             intText.SetActive(false);
+            isPlayerInRange = false;
+            //Debug.Log("Is  NOT in range");
+
         }
     }
-    IEnumerator repeat()
+
+    private void OpenDoor()
     {
-        yield return new WaitForSeconds(4.0f);
-        opened = false;
-        door_closed.SetActive(true);
-        door_opened.SetActive(false);
-        //close.play();
+        door_closed.SetActive(false);
+        door_opened.SetActive(true);
+        //intText.SetActive(false);
+        //open.Play();
+        opened = true;
+        //Debug.Log("door opened");
+
     }
+
+    void Update()
+    {
+        if (isPlayerInRange==true && opened==false && Input.GetKeyDown(KeyCode.E))
+        {
+            OpenDoor();
+        }
+    }
+
+    
 }
