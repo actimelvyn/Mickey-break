@@ -19,7 +19,7 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //intText.SetActive(true);
+            intText.SetActive(true);
             isPlayerInRange =  true;
             //Debug.Log("Is in range");
         }
@@ -40,7 +40,7 @@ public class Door : MonoBehaviour
     {
         door_closed.SetActive(false);
         door_opened.SetActive(true);
-        //intText.SetActive(false);
+        intText.SetActive(false);
         //open.Play();
         opened = true;
         //Debug.Log("door opened");
