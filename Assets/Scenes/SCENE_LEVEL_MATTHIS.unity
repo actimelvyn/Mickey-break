@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 200927364}
   - component: {fileID: 200927363}
   - component: {fileID: 200927362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2296,7 +2296,7 @@ GameObject:
   - component: {fileID: 478052168}
   - component: {fileID: 478052167}
   - component: {fileID: 478052166}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2706,7 +2706,7 @@ GameObject:
   - component: {fileID: 516859923}
   - component: {fileID: 516859922}
   - component: {fileID: 516859921}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2929,7 +2929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 601630442}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: ObjectGrabPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3661,7 +3661,7 @@ GameObject:
   - component: {fileID: 892532706}
   - component: {fileID: 892532705}
   - component: {fileID: 892532704}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: PlayerCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3813,7 +3813,7 @@ Transform:
   m_GameObject: {fileID: 892532703}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7387248, z: -0, w: 0.6740072}
-  m_LocalPosition: {x: 3.4177, y: 1.6121, z: 3.7148}
+  m_LocalPosition: {x: 3.756, y: 0.466, z: 0.091}
   m_LocalScale: {x: 0.24120462, y: 0.24120462, z: 0.24120462}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4268,7 +4268,7 @@ GameObject:
   - component: {fileID: 1021324356}
   - component: {fileID: 1021324358}
   - component: {fileID: 1021324357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4731,7 +4731,7 @@ GameObject:
   - component: {fileID: 1221035044}
   - component: {fileID: 1221035043}
   - component: {fileID: 1221035046}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4838,9 +4838,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501e887a4cc98994ab89f2b170973e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  FPScam: {fileID: 1336279424}
 --- !u!1 &1259675979
 GameObject:
   m_ObjectHideFlags: 0
@@ -5019,7 +5016,7 @@ GameObject:
   - component: {fileID: 1336279423}
   - component: {fileID: 1336279422}
   - component: {fileID: 1336279421}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: PlayerCam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -7158,6 +7155,7 @@ GameObject:
   - component: {fileID: 1865271354}
   - component: {fileID: 1865271353}
   - component: {fileID: 1865271357}
+  - component: {fileID: 1865271358}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -7247,7 +7245,7 @@ Transform:
   m_GameObject: {fileID: 1865271352}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.84, y: 0.7, z: 0.43}
+  m_LocalPosition: {x: -0.48, y: 0.7, z: 1.68}
   m_LocalScale: {x: 0.79988784, y: 0.79988784, z: 0.79988784}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7265,6 +7263,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcb265301953fe4ea8a037fbee6ceae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 50
+--- !u!114 &1865271358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865271352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b4a696e58d8564a9c497ff7482b192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 10
+  angle: 100
+  playerRef: {fileID: 892532703}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
+  ObstructionMask:
+    serializedVersion: 2
+    m_Bits: 256
+  canSeePlayer: 0
 --- !u!1 &1956767030
 GameObject:
   m_ObjectHideFlags: 0
