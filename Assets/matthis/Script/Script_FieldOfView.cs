@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Script_FieldOfView : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class Script_FieldOfView : MonoBehaviour
     public LayerMask targetMask, ObstructionMask;
 
     public bool canSeePlayer;
+    //public Animator CatAnim;
+    public float DeathTime;
+    public string sceneName;
 
     private void Start()
     {
@@ -48,10 +52,14 @@ public class Script_FieldOfView : MonoBehaviour
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, ObstructionMask))
+                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, ObstructionMask)) 
+                { 
                     canSeePlayer = true;
+                    playerRef.SetActive(false);
+                    StartCoroutine(DeathScene());
+                }
 
-                
+
                 else
                     canSeePlayer = false;
                 
@@ -64,4 +72,10 @@ public class Script_FieldOfView : MonoBehaviour
             canSeePlayer = false;
        
     }
+    IEnumerator DeathScene()
+    { 
+        yield return new WaitForSeconds(DeathTime);
+        SceneManager.LoadScene(sceneName);
+    }
+
 }
