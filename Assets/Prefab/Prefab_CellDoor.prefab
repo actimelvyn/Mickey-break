@@ -202,6 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4197775552063635036}
+  - component: {fileID: 4205773246464423679}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -225,6 +226,27 @@ Transform:
   - {fileID: 7296029551914804372}
   m_Father: {fileID: 8641440355115343725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4205773246464423679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2565697917758288123}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 15, y: 24, z: 1.5}
+  m_Center: {x: 0, y: 12, z: 0}
 --- !u!1 &3644320162978604552
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,10 +701,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 478aad864c4efd345871802f108807d1,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8041162416757201172}
     - targetCorrespondingSourceObject: {fileID: 4975067239542461844, guid: 478aad864c4efd345871802f108807d1,
         type: 3}
       insertIndex: -1
@@ -942,33 +960,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8474622361943542247}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8744444505647166646 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 478aad864c4efd345871802f108807d1,
-    type: 3}
-  m_PrefabInstance: {fileID: 8474622361943542247}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &8041162416757201172
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8744444505647166646}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 15, y: 24, z: 1.5}
-  m_Center: {x: 0, y: 12, z: 0}
 --- !u!4 &9051899236144214660 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 577910210085747555, guid: 478aad864c4efd345871802f108807d1,
