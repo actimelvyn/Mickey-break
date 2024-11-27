@@ -41,9 +41,10 @@ public class Script_PickUp_Light : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             PickUpText.SetActive(true);
-
-            if (Input.GetKeyUp(KeyCode.E))
+            print("aaa");
+            if (Input.GetKey(KeyCode.E))
             {
+                print("bbb");
                 // Deactivate the pickup object
                 this.gameObject.SetActive(false);
 

@@ -31,6 +31,10 @@ public class Script_ObjectGrabbable : MonoBehaviour
     {
         if (objectGrabPointTansform != null)
         {
+           // objectRigidbody.freezeRotation = false;
+            //objectRigidbody.freezeposition = false;
+
+
             float lerpSpeed = 10f;
             Vector3 newPosition = Vector3.Lerp(transform.position, objectGrabPointTansform.position, Time.deltaTime * lerpSpeed);
             objectRigidbody.MovePosition(newPosition);
