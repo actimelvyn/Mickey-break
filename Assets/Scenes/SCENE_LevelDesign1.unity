@@ -1470,7 +1470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &364986405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2134,6 +2134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 800992848}
   PickUpText: {fileID: 1392675417}
+  targetMaterial: {fileID: 0}
 --- !u!65 &559932717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4073,6 +4074,8 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 49c5c79637a31d94ca0b590573633b43, type: 2}
+  - {fileID: 2100000, guid: 692e8af1bb6799843b34e3a34a7b9eef, type: 2}
+  - {fileID: 2100000, guid: 77b64602b46ba0d4895592fb30e0475a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4211,6 +4214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 1729749466}
   PickUpText: {fileID: 1392675417}
+  targetMaterial: {fileID: 2100000, guid: 77b64602b46ba0d4895592fb30e0475a, type: 2}
 --- !u!65 &810777711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10645,6 +10649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 364986404}
   PickUpText: {fileID: 1392675417}
+  targetMaterial: {fileID: 0}
 --- !u!65 &1715689326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10764,8 +10769,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1798f7d6cc9b20343994fb0d7f69ac0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KeyOnPlayer: {fileID: 364986404}
+  keyOnPlayer: {fileID: 0}
+  interactable: 0
+  toggle: 0
   PickUpText: {fileID: 1392675417}
+  vaseAnim: {fileID: 0}
 --- !u!1 &1729749466
 GameObject:
   m_ObjectHideFlags: 0
@@ -11154,6 +11162,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -578615744435145118, guid: fec69d4c63aef9240b51eb0ff9ee74d8,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -578615744435145118, guid: fec69d4c63aef9240b51eb0ff9ee74d8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77b64602b46ba0d4895592fb30e0475a, type: 2}
     - target: {fileID: 919132149155446097, guid: fec69d4c63aef9240b51eb0ff9ee74d8,
         type: 3}
       propertyPath: m_Name
@@ -12182,6 +12200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 1729749466}
   PickUpText: {fileID: 0}
+  targetMaterial: {fileID: 0}
 --- !u!136 &1923209560
 CapsuleCollider:
   m_ObjectHideFlags: 0

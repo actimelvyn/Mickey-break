@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Script_PickUp_Light : MonoBehaviour
 {
-
     public GameObject LightOnPlayer;
     public GameObject PickUpText;
+    public Material targetMaterial; // Reference to the material with the _Activator property
 
-    // Start is called before the first frame update
     void Start()
     {
         LightOnPlayer.SetActive(false);
@@ -17,17 +16,30 @@ public class Script_PickUp_Light : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
             PickUpText.SetActive(true);
 
-            if (Input.GetKeyUp(KeyCode.E)) 
+            if (Input.GetKeyUp(KeyCode.E))
             {
+                // Deactivate the pickup object
                 this.gameObject.SetActive(false);
 
+                // Activate the light
                 LightOnPlayer.SetActive(true);
 
+                // Hide the pickup text
                 PickUpText.SetActive(false);
+
+                // Change the _Activator property of the material
+                if (targetMaterial != null)
+                {
+                    targetMaterial.SetFloat("_Activator", 1f);
+                }
+                else
+                {
+                    Debug.LogWarning("Target Material is not assigned!");
+                }
             }
         }
     }
@@ -36,5 +48,4 @@ public class Script_PickUp_Light : MonoBehaviour
     {
         PickUpText.SetActive(false);
     }
-
 }
