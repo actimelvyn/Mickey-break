@@ -54,9 +54,9 @@ Material:
     - _Activator: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _fade_distance: 6
+    - _fade_distance: 6.5
     - _otline_thickness: 0.0155
-    - _outline_thickness: 0.0301
+    - _outline_thickness: 0.0337
     m_Colors:
     - _outlineColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

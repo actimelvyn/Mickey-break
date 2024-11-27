@@ -2164,6 +2164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 800992848}
   PickUpText: {fileID: 1392675417}
+  drank: 0
   targetObjects: []
   outlineBlack: {fileID: 0}
   outlineWhite: {fileID: 0}
@@ -4252,6 +4253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 1729749466}
   PickUpText: {fileID: 1392675417}
+  drank: 0
   targetObjects:
   - renderer: {fileID: 942052372}
     useBothMaterials: 0
@@ -4498,7 +4500,7 @@ MonoBehaviour:
   interactable1: 0
   toggle: 0
   doorAnim: {fileID: 857107175}
-  key: 0
+  scriptPickUpLight: {fileID: 0}
 --- !u!1 &893526312 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f3f4084a9d17be49a85ebb7696ddb71,
@@ -8224,7 +8226,7 @@ MonoBehaviour:
   interactable1: 0
   toggle: 0
   doorAnim: {fileID: 1329750119}
-  key: 0
+  scriptPickUpLight: {fileID: 810777710}
 --- !u!1001 &1336555195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10704,6 +10706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 364986404}
   PickUpText: {fileID: 1392675417}
+  drank: 0
   targetObjects: []
   outlineBlack: {fileID: 0}
   outlineWhite: {fileID: 0}
@@ -12262,6 +12265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 1729749466}
   PickUpText: {fileID: 0}
+  drank: 0
   targetObjects: []
   outlineBlack: {fileID: 0}
   outlineWhite: {fileID: 0}

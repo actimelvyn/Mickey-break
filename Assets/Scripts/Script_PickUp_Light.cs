@@ -6,6 +6,7 @@ public class Script_PickUp_Light : MonoBehaviour
 {
     public GameObject LightOnPlayer;
     public GameObject PickUpText;
+    public bool drank;
 
     [System.Serializable]
     public class TargetObject
@@ -23,6 +24,7 @@ public class Script_PickUp_Light : MonoBehaviour
     {
         LightOnPlayer.SetActive(false);
         PickUpText.SetActive(false);
+        drank = false;
 
         // Store original materials for all objects
         foreach (TargetObject target in targetObjects)
@@ -50,6 +52,8 @@ public class Script_PickUp_Light : MonoBehaviour
 
                 // Hide the pickup text
                 PickUpText.SetActive(false);
+
+                drank = true;
 
                 // Assign additional materials to each target
                 foreach (TargetObject target in targetObjects)
