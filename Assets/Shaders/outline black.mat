@@ -54,7 +54,7 @@ Material:
     - _Activator: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _fade_distance: 10
+    - _fade_distance: 6
     - _otline_thickness: 0.0155
     - _outline_thickness: 0.0217
     m_Colors:

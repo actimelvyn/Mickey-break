@@ -38,12 +38,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Activator: 0
+    - _Activator: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _fade_distance: 20
+    - _fade_distance: 6
     - _otline_thickness: 0.0221
-    - _outline_thickness: 0.00725
+    - _outline_thickness: 0.0069
     m_Colors:
     - _outlineColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
