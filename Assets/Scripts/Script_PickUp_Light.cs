@@ -6,12 +6,20 @@ public class Script_PickUp_Light : MonoBehaviour
 {
     public GameObject LightOnPlayer;
     public GameObject PickUpText;
-    public Material targetMaterial; // Reference to the material with the _Activator property
+    public Renderer targetRenderer; // Renderer of the object to which materials are applied
+    public Material outlineBlack;
+    public Material outlineWhite;
 
     void Start()
     {
         LightOnPlayer.SetActive(false);
         PickUpText.SetActive(false);
+
+        // Ensure materials are not applied initially
+        if (targetRenderer != null)
+        {
+            targetRenderer.material = null; // Remove any assigned material at the start
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -31,14 +39,14 @@ public class Script_PickUp_Light : MonoBehaviour
                 // Hide the pickup text
                 PickUpText.SetActive(false);
 
-                // Change the _Activator property of the material
-                if (targetMaterial != null)
+                // Apply materials to the Renderer
+                if (targetRenderer != null)
                 {
-                    targetMaterial.SetFloat("_Activator", 1f);
+                    targetRenderer.materials = new Material[] { outlineBlack, outlineWhite };
                 }
                 else
                 {
-                    Debug.LogWarning("Target Material is not assigned!");
+                    Debug.LogWarning("Target Renderer is not assigned!");
                 }
             }
         }

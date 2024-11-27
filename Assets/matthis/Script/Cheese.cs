@@ -18,7 +18,7 @@ public class Cheese : MonoBehaviour
         // Find all colliders within the explosion radius
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
 
-        foreach (Collider near in colliders)
+            foreach (Collider near in colliders)
         {
             // Check if the collider has the tag "Cat"
             if (near.CompareTag("Cat"))
