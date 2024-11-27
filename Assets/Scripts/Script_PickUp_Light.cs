@@ -6,7 +6,16 @@ public class Script_PickUp_Light : MonoBehaviour
 {
     public GameObject LightOnPlayer;
     public GameObject PickUpText;
-    public Renderer targetRenderer; // Renderer of the object to which materials are applied
+
+    [System.Serializable]
+    public class TargetObject
+    {
+        public Renderer renderer;         // Renderer of the object
+        public bool useBothMaterials;     // Whether to apply both materials
+        [HideInInspector] public Material[] originalMaterials; // Stores the original materials
+    }
+
+    public List<TargetObject> targetObjects; // List of objects with their material settings
     public Material outlineBlack;
     public Material outlineWhite;
 
@@ -15,10 +24,13 @@ public class Script_PickUp_Light : MonoBehaviour
         LightOnPlayer.SetActive(false);
         PickUpText.SetActive(false);
 
-        // Ensure materials are not applied initially
-        if (targetRenderer != null)
+        // Store original materials for all objects
+        foreach (TargetObject target in targetObjects)
         {
-            targetRenderer.material = null; // Remove any assigned material at the start
+            if (target.renderer != null)
+            {
+                target.originalMaterials = target.renderer.materials; // Store the current materials
+            }
         }
     }
 
@@ -39,14 +51,26 @@ public class Script_PickUp_Light : MonoBehaviour
                 // Hide the pickup text
                 PickUpText.SetActive(false);
 
-                // Apply materials to the Renderer
-                if (targetRenderer != null)
+                // Assign additional materials to each target
+                foreach (TargetObject target in targetObjects)
                 {
-                    targetRenderer.materials = new Material[] { outlineBlack, outlineWhite };
-                }
-                else
-                {
-                    Debug.LogWarning("Target Renderer is not assigned!");
+                    if (target.renderer != null)
+                    {
+                        // Combine original materials with the new materials
+                        List<Material> combinedMaterials = new List<Material>(target.originalMaterials);
+
+                        if (target.useBothMaterials)
+                        {
+                            combinedMaterials.Add(outlineBlack);
+                            combinedMaterials.Add(outlineWhite);
+                        }
+                        else
+                        {
+                            combinedMaterials.Add(outlineBlack); // Add only one material
+                        }
+
+                        target.renderer.materials = combinedMaterials.ToArray(); // Update materials
+                    }
                 }
             }
         }
@@ -57,3 +81,4 @@ public class Script_PickUp_Light : MonoBehaviour
         PickUpText.SetActive(false);
     }
 }
+

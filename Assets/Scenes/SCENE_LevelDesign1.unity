@@ -2164,7 +2164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 800992848}
   PickUpText: {fileID: 1392675417}
-  targetMaterial: {fileID: 0}
+  targetObjects: []
+  outlineBlack: {fileID: 0}
+  outlineWhite: {fileID: 0}
 --- !u!65 &559932717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2184,8 +2186,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25, y: 0.25, z: 0.25}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.14112513, y: 0.16560455, z: 0.19565873}
+  m_Center: {x: 0.008423912, y: 0.010024965, z: 0.027170634}
 --- !u!23 &559932718
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2207,8 +2209,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 49c5c79637a31d94ca0b590573633b43, type: 2}
-  - {fileID: 2100000, guid: 77b64602b46ba0d4895592fb30e0475a, type: 2}
-  - {fileID: 2100000, guid: 692e8af1bb6799843b34e3a34a7b9eef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3281,6 +3281,12 @@ Transform:
   - {fileID: 388456491}
   m_Father: {fileID: 34363972}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &688893697 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5227744121070977776, guid: 98fadea16ebca3a40a9b2d0fb34d732b,
+    type: 3}
+  m_PrefabInstance: {fileID: 690301453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &689155398
 GameObject:
   m_ObjectHideFlags: 0
@@ -4246,7 +4252,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 1729749466}
   PickUpText: {fileID: 1392675417}
-  targetMaterial: {fileID: 2100000, guid: 77b64602b46ba0d4895592fb30e0475a, type: 2}
+  targetObjects:
+  - renderer: {fileID: 942052372}
+    useBothMaterials: 0
+    originalMaterials: []
+  - renderer: {fileID: 321200332}
+    useBothMaterials: 1
+    originalMaterials: []
+  - renderer: {fileID: 688893697}
+    useBothMaterials: 1
+    originalMaterials: []
+  outlineBlack: {fileID: 2100000, guid: 77b64602b46ba0d4895592fb30e0475a, type: 2}
+  outlineWhite: {fileID: 2100000, guid: 692e8af1bb6799843b34e3a34a7b9eef, type: 2}
 --- !u!65 &810777711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4805,8 +4822,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  - {fileID: 2100000, guid: 77b64602b46ba0d4895592fb30e0475a, type: 2}
-  - {fileID: 2100000, guid: 692e8af1bb6799843b34e3a34a7b9eef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4934,6 +4949,12 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: c90fca4ffc0175542a8fa0a8c26814eb, type: 2}
+--- !u!23 &942052372 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -578615744435145118, guid: fec69d4c63aef9240b51eb0ff9ee74d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1796559888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &948326478 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8da2f94f863a50e458408b30a34e7878,
@@ -10683,7 +10704,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 364986404}
   PickUpText: {fileID: 1392675417}
-  targetMaterial: {fileID: 0}
+  targetObjects: []
+  outlineBlack: {fileID: 0}
+  outlineWhite: {fileID: 0}
 --- !u!65 &1715689326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10726,8 +10749,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  - {fileID: 2100000, guid: 692e8af1bb6799843b34e3a34a7b9eef, type: 2}
-  - {fileID: 2100000, guid: 77b64602b46ba0d4895592fb30e0475a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11201,8 +11222,13 @@ PrefabInstance:
     - target: {fileID: -578615744435145118, guid: fec69d4c63aef9240b51eb0ff9ee74d8,
         type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -578615744435145118, guid: fec69d4c63aef9240b51eb0ff9ee74d8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49c5c79637a31d94ca0b590573633b43, type: 2}
     - target: {fileID: -578615744435145118, guid: fec69d4c63aef9240b51eb0ff9ee74d8,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -12236,7 +12262,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 1729749466}
   PickUpText: {fileID: 0}
-  targetMaterial: {fileID: 0}
+  targetObjects: []
+  outlineBlack: {fileID: 0}
+  outlineWhite: {fileID: 0}
 --- !u!136 &1923209560
 CapsuleCollider:
   m_ObjectHideFlags: 0
