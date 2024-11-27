@@ -23,7 +23,6 @@ public class newDoor : MonoBehaviour
             intText.SetActive(true);
             interactable1 = true;
 
-
         }
 
     }
@@ -42,6 +41,7 @@ public class newDoor : MonoBehaviour
         {
             doorAnim.SetTrigger("open");
             intText.SetActive(false);
+
 
         }
 
