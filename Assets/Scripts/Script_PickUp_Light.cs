@@ -41,10 +41,9 @@ public class Script_PickUp_Light : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             PickUpText.SetActive(true);
-            print("aaa");
+
             if (Input.GetKey(KeyCode.E))
             {
-                print("bbb");
                 // Deactivate the pickup object
                 this.gameObject.SetActive(false);
 
@@ -56,25 +55,23 @@ public class Script_PickUp_Light : MonoBehaviour
 
                 drank = true;
 
-                // Assign additional materials to each target
-                foreach (TargetObject target in targetObjects)
+                // Find all objects with the tag "BW"
+                GameObject[] bwObjects = GameObject.FindGameObjectsWithTag("BW");
+
+                foreach (GameObject obj in bwObjects)
                 {
-                    if (target.renderer != null)
+                    Renderer renderer = obj.GetComponent<Renderer>();
+                    if (renderer != null)
                     {
-                        // Combine original materials with the new materials
-                        List<Material> combinedMaterials = new List<Material>(target.originalMaterials);
-
-                        if (target.useBothMaterials)
+                        // Activate the _Activator property for all materials
+                        foreach (Material material in renderer.materials)
                         {
-                            combinedMaterials.Add(outlineBlack);
-                            combinedMaterials.Add(outlineWhite);
+                            if (material.HasProperty("_Activator"))
+                            {
+                                material.SetFloat("_Activator", 1.0f); // Set _Activator to true
+                                print("onn");
+                            }
                         }
-                        else
-                        {
-                            combinedMaterials.Add(outlineBlack); // Add only one material
-                        }
-
-                        target.renderer.materials = combinedMaterials.ToArray(); // Update materials
                     }
                 }
             }
@@ -86,4 +83,3 @@ public class Script_PickUp_Light : MonoBehaviour
         PickUpText.SetActive(false);
     }
 }
-

@@ -7,6 +7,7 @@ public class newDoor : MonoBehaviour
     public GameObject intText;
     public bool interactable1, toggle;
     public Animator doorAnim;
+    public GameObject ColliderDis;
 
     // Reference to the Script_PickUp_Light script
     public Script_PickUp_Light scriptPickUpLight;
@@ -48,6 +49,7 @@ public class newDoor : MonoBehaviour
         {
             doorAnim.SetTrigger("open");
             intText.SetActive(false);
+
         }
     }
 }
