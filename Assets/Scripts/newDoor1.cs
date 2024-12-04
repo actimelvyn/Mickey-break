@@ -48,7 +48,7 @@ public class newDoor : MonoBehaviour
         if (interactable1 && Input.GetKeyUp(KeyCode.E) && scriptPickUpBottle.drank)
         {
             doorAnim.SetTrigger("open");
-            intText.SetActive(false);
+            Destroy (intText);
 
         }
     }
