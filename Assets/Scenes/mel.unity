@@ -1375,7 +1375,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4708130650244959228, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 810777710}
+      addedObject: {fileID: 810777712}
   m_SourcePrefab: {fileID: 100100000, guid: ad7f5f0acdc6d18408303ba6f35c1f2b, type: 3}
 --- !u!1 &364986404
 GameObject:
@@ -2059,10 +2059,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 800992848}
   PickUpText: {fileID: 870944571}
-  drank: 0
-  targetObjects: []
-  outlineBlack: {fileID: 0}
-  outlineWhite: {fileID: 0}
 --- !u!65 &559932717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2104,7 +2100,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ee0f89d5478e854a9830b198075be1d, type: 2}
+  - {fileID: 2100000, guid: 08b0d82fb405e1641bb192621db77a29, type: 2}
   - {fileID: 2100000, guid: 33560b4c4626c2a48a5fc76d04cce0b0, type: 2}
   - {fileID: 2100000, guid: 8b541e45cec635f4cae0ec968a9aec01, type: 2}
   m_StaticBatchInfo:
@@ -4033,7 +4029,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49c5c79637a31d94ca0b590573633b43, type: 2}
+  - {fileID: 2100000, guid: 08b0d82fb405e1641bb192621db77a29, type: 2}
   - {fileID: 2100000, guid: 692e8af1bb6799843b34e3a34a7b9eef, type: 2}
   - {fileID: 2100000, guid: 77b64602b46ba0d4895592fb30e0475a, type: 2}
   m_StaticBatchInfo:
@@ -4160,24 +4156,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 358078261}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &810777710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810777708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3abc638769fa5874fab41de7d210efe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LightOnPlayer: {fileID: 1729749466}
-  PickUpText: {fileID: 870944571}
-  drank: 1
-  targetObjects: []
-  outlineBlack: {fileID: 0}
-  outlineWhite: {fileID: 0}
 --- !u!65 &810777711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4199,6 +4177,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1012116, y: 0.1, z: 0.06875557}
   m_Center: {x: 0.035158016, y: 2.692605e-16, z: -0.032038268}
+--- !u!114 &810777712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810777708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da482cc22d7595644b4bfa9fd8fede95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightOnPlayer: {fileID: 0}
+  PickUpText: {fileID: 0}
+  drank: 0
+  targetObjects: []
+  outlineBlack: {fileID: 0}
+  outlineWhite: {fileID: 0}
 --- !u!4 &844417509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ec4bc422c8cc5846bc9d4008de15128,
@@ -4412,8 +4408,7 @@ MonoBehaviour:
   interactable1: 0
   toggle: 0
   doorAnim: {fileID: 857107175}
-  ColliderDis: {fileID: 0}
-  scriptPickUpLight: {fileID: 0}
+  scriptPickUpBottle: {fileID: 0}
 --- !u!1 &870944571
 GameObject:
   m_ObjectHideFlags: 0
@@ -8268,8 +8263,7 @@ MonoBehaviour:
   interactable1: 0
   toggle: 0
   doorAnim: {fileID: 1329750119}
-  ColliderDis: {fileID: 0}
-  scriptPickUpLight: {fileID: 810777710}
+  scriptPickUpBottle: {fileID: 0}
 --- !u!1001 &1336555195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12300,10 +12294,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 1729749466}
   PickUpText: {fileID: 0}
-  drank: 0
-  targetObjects: []
-  outlineBlack: {fileID: 0}
-  outlineWhite: {fileID: 0}
 --- !u!136 &1923209560
 CapsuleCollider:
   m_ObjectHideFlags: 0
