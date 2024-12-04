@@ -3521,11 +3521,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1553663740551955101, guid: 98fadea16ebca3a40a9b2d0fb34d732b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1329750120}
+      addedObject: {fileID: 1329750119}
     - targetCorrespondingSourceObject: {fileID: 1553663740551955101, guid: 98fadea16ebca3a40a9b2d0fb34d732b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1329750119}
+      addedObject: {fileID: 1329750124}
   m_SourcePrefab: {fileID: 100100000, guid: 98fadea16ebca3a40a9b2d0fb34d732b, type: 3}
 --- !u!1 &701858701
 GameObject:
@@ -4189,8 +4189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da482cc22d7595644b4bfa9fd8fede95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightOnPlayer: {fileID: 0}
-  PickUpText: {fileID: 0}
+  LightOnPlayer: {fileID: 1729749466}
+  PickUpText: {fileID: 1392675417}
   drank: 0
   targetObjects: []
   outlineBlack: {fileID: 0}
@@ -8247,7 +8247,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1329750120
+--- !u!114 &1329750124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8259,11 +8259,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb8b0596cbdd7240bc2f7a4e6096c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intText: {fileID: 1329750117}
+  intText: {fileID: 998183955}
   interactable1: 0
   toggle: 0
   doorAnim: {fileID: 1329750119}
-  scriptPickUpBottle: {fileID: 0}
+  scriptPickUpBottle: {fileID: 810777712}
 --- !u!1001 &1336555195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10851,7 +10851,7 @@ MonoBehaviour:
   keyOnPlayer: {fileID: 364986404}
   interactable: 0
   toggle: 0
-  PickUpText: {fileID: 1392675417}
+  PickUpText: {fileID: 870944571}
   vaseAnim: {fileID: 1966127204}
 --- !u!1 &1729749466
 GameObject:

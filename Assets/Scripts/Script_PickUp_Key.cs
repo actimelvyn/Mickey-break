@@ -25,7 +25,7 @@ public class Script_PickUP_Key : MonoBehaviour
             PickUpText.SetActive(true);
             interactable = true;
 
-            if (Input.GetKeyUp(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
                 this.gameObject.SetActive(false);
 

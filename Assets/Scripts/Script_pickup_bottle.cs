@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Script_PickUp_bottle : MonoBehaviour
 {
+    public GameObject LightOnPlayer;
     public GameObject PickUpText;
     public bool drank;
 
@@ -21,6 +22,7 @@ public class Script_PickUp_bottle : MonoBehaviour
 
     void Start()
     {
+        LightOnPlayer.SetActive(false);
         PickUpText.SetActive(false);
         drank = false;
 
@@ -45,6 +47,8 @@ public class Script_PickUp_bottle : MonoBehaviour
                 // Deactivate the pickup object
                 this.gameObject.SetActive(false);
 
+                // Activate the light
+                LightOnPlayer.SetActive(true);
 
                 // Hide the pickup text
                 PickUpText.SetActive(false);
