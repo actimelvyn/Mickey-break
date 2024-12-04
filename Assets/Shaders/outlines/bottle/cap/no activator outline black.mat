@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: outline black
+  m_Name: no activator outline black
   m_Shader: {fileID: -6465566751694194690, guid: c4a9d4120cb210f42911749288c71f87,
     type: 3}
   m_Parent: {fileID: 0}
@@ -57,7 +57,7 @@ Material:
     - _QueueOffset: 0
     - _fade_distance: 6.5
     - _otline_thickness: 0.0155
-    - _outline_thickness: 0.0222
+    - _outline_thickness: 0.0057
     m_Colors:
     - _outlineColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
