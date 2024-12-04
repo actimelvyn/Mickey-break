@@ -32,6 +32,8 @@ public class Script_PickUP_Key : MonoBehaviour
                 keyOnPlayer.SetActive(true);
 
                 PickUpText.SetActive(false);
+                vaseAnim.SetTrigger("pick_up");
+                PickUpText.SetActive(false);
             }
         }
     }
@@ -40,19 +42,6 @@ public class Script_PickUP_Key : MonoBehaviour
     {
         PickUpText.SetActive(false);
         interactable = false;
-    }
-
-    private void Update()
-    {
-        if ((interactable == true) && (Input.GetKeyUp(KeyCode.E)))
-        {
-            vaseAnim.SetTrigger("pick_up");
-            PickUpText.SetActive(false);
-
-        }
-
-
-
     }
 
 }

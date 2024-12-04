@@ -5,12 +5,10 @@ using UnityEngine;
 public class Script_PickUp_Light : MonoBehaviour
 {
     public GameObject LightOnPlayer;
-    public GameObject PickUpText;
 
     void Start()
     {
         LightOnPlayer.SetActive(false);
-        PickUpText.SetActive(false);
 
      
     }
@@ -25,9 +23,6 @@ public class Script_PickUp_Light : MonoBehaviour
 
                 // Activate the light
                 LightOnPlayer.SetActive(true);
-
-                // Hide the pickup text
-                PickUpText.SetActive(false);
 
 
                
