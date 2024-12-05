@@ -205,6 +205,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: eye (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a699b0f3046bc7649abd1898056b5da8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2146,7 +2151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 800992848}
-  PickUpText: {fileID: 870944571}
 --- !u!65 &559932717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3698,6 +3702,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: eye
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a699b0f3046bc7649abd1898056b5da8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4523,9 +4532,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03059d827e11ccd4f8b378360a454d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door_closed: {fileID: 1377836865}
-  door_opened: {fileID: 0}
-  intText: {fileID: 0}
 --- !u!65 &857107174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12469,7 +12475,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightOnPlayer: {fileID: 1729749466}
-  PickUpText: {fileID: 0}
 --- !u!136 &1923209560
 CapsuleCollider:
   m_ObjectHideFlags: 0

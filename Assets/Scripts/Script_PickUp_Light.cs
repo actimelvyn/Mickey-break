@@ -8,26 +8,20 @@ public class Script_PickUp_Light : MonoBehaviour
 
     void Start()
     {
+        // Ensure the light on the player starts as inactive
         LightOnPlayer.SetActive(false);
-
-     
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        // Check if the player enters the trigger and the light is currently inactive
+        if (other.gameObject.CompareTag("Player") && !LightOnPlayer.activeSelf)
         {
+            // Deactivate the pickup object
+            this.gameObject.SetActive(false);
 
-                // Deactivate the pickup object
-                this.gameObject.SetActive(false);
-
-                // Activate the light
-                LightOnPlayer.SetActive(true);
-
-
-               
-         
+            // Activate the light
+            LightOnPlayer.SetActive(true);
         }
     }
-
 }
