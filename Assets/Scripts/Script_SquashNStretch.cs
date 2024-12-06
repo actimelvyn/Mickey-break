@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Script_SquashNStretch : MonoBehaviour
 {
@@ -60,6 +61,8 @@ public class Script_SquashNStretch : MonoBehaviour
     private static event Action _squashAndStretchAllObjectsLikeThis;
 
 
+    [Header("VFX Settings")]
+    [SerializeField] VisualEffect _smokePoof;
 
     private void Awake()
     {
@@ -94,6 +97,7 @@ public class Script_SquashNStretch : MonoBehaviour
     {
         if (playOnStart)
             CheckForAndStartCoroutine();
+             PlayParticle();
     }
 
     [ContextMenu("Play Squash and Stretch")]
@@ -103,7 +107,20 @@ public class Script_SquashNStretch : MonoBehaviour
             return;
 
         CheckForAndStartCoroutine();
+        PlayParticle();
     }
+    public void PlayParticle()
+    {
+        // instantiate
+        VisualEffect newBurstEffect = Instantiate(_smokePoof, transform.position, transform.rotation);
+
+        // play
+        newBurstEffect.Play();
+
+        // destroy
+        Destroy(newBurstEffect.gameObject, 1.5f);
+    }
+
 
     private void CheckForAndStartCoroutine()
     {
@@ -217,5 +234,6 @@ public class Script_SquashNStretch : MonoBehaviour
 
         if (playImmediately)
             CheckForAndStartCoroutine();
+             PlayParticle();
     }
 }
