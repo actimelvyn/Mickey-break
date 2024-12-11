@@ -3334,7 +3334,6 @@ MonoBehaviour:
   LightOnPlayer: {fileID: 1729749466}
   PickUpText: {fileID: 1392675417}
   drank: 0
-  targetObjects: []
   outlineBlack: {fileID: 0}
   outlineWhite: {fileID: 0}
 --- !u!1001 &844379836
@@ -7442,6 +7441,9 @@ MonoBehaviour:
   toggle: 0
   PickUpText: {fileID: 1392675417}
   vaseAnim: {fileID: 1966127204}
+  fracturedVase: {fileID: 0}
+  intactVase: {fileID: 0}
+  delayBeforeBreaking: 5
 --- !u!1001 &1726796324
 PrefabInstance:
   m_ObjectHideFlags: 0
