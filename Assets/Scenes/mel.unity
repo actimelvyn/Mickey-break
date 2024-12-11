@@ -1386,6 +1386,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: c98366c5b2c4f594f8bc150f9db313fb, type: 2}
+    - target: {fileID: 1348352593242344753, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348352593242344753, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c98366c5b2c4f594f8bc150f9db313fb, type: 2}
+    - target: {fileID: 1348352593242344753, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 81f085b43ed77e84da130df883457037, type: 2}
     - target: {fileID: 2775806299738346768, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1471,6 +1486,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 8702784292694905980, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702784292694905980, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75be32ed9499f804994820f3057445a2, type: 2}
+    - target: {fileID: 8702784292694905980, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: c6ef7c902140d7e4992f6cfd57ae1869, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3709,9 +3739,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: a699b0f3046bc7649abd1898056b5da8,
         type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a699b0f3046bc7649abd1898056b5da8,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6a4fcf3dd9a35774998e4e1789086434, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a699b0f3046bc7649abd1898056b5da8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0007d350cbf03544abd388b2c308554, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a699b0f3046bc7649abd1898056b5da8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 692e8af1bb6799843b34e3a34a7b9eef, type: 2}
     - target: {fileID: 919132149155446097, guid: a699b0f3046bc7649abd1898056b5da8,
         type: 3}
       propertyPath: m_Name
@@ -3721,6 +3766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a699b0f3046bc7649abd1898056b5da8,
+        type: 3}
+      propertyPath: m_TagString
+      value: BW
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4398,7 +4448,6 @@ MonoBehaviour:
   LightOnPlayer: {fileID: 1729749466}
   PickUpText: {fileID: 1392675417}
   drank: 0
-  targetObjects: []
   outlineBlack: {fileID: 0}
   outlineWhite: {fileID: 0}
 --- !u!4 &844417509 stripped
@@ -11196,7 +11245,7 @@ MonoBehaviour:
   vaseAnim: {fileID: 1966127204}
   fracturedVase: {fileID: 1790683903}
   intactVase: {fileID: 1358531144}
-  delayBeforeBreaking: 5
+  delayBeforeBreaking: 2.5
 --- !u!1 &1729749466
 GameObject:
   m_ObjectHideFlags: 0
