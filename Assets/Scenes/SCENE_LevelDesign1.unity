@@ -7496,7 +7496,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1707369286}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!1 &1715689324
 GameObject:
   m_ObjectHideFlags: 0
@@ -7645,8 +7644,6 @@ MonoBehaviour:
   fracturedVase: {fileID: 0}
   intactVase: {fileID: 0}
   delayBeforeBreaking: 5
-=======
->>>>>>> Stashed changes
 --- !u!1001 &1726796324
 PrefabInstance:
   m_ObjectHideFlags: 0

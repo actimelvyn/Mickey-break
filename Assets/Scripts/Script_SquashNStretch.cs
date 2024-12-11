@@ -64,6 +64,8 @@ public class Script_SquashNStretch : MonoBehaviour
     [Header("VFX Settings")]
     [SerializeField] VisualEffect _smokePoof;
 
+    //Awaken or Disable Coroutine if multiple Coroutine are present on object
+
     private void Awake()
     {
         if (transformToAffect == null)
@@ -121,6 +123,7 @@ public class Script_SquashNStretch : MonoBehaviour
         Destroy(newBurstEffect.gameObject, 1.5f);
     }
 
+    //Start of the Coroutine
 
     private void CheckForAndStartCoroutine()
     {
@@ -140,6 +143,7 @@ public class Script_SquashNStretch : MonoBehaviour
         _squashAndStretchCoroutine = StartCoroutine(SquashAndStretchEffect());
     }
 
+    //All the calculations done to do the squash and strecht effect, capable of affecting multiple axis at once
 
     private IEnumerator SquashAndStretchEffect()
     {
@@ -210,6 +214,7 @@ public class Script_SquashNStretch : MonoBehaviour
         } while (looping);
     }
 
+    // Create the looping fonction for Effect
 
     public void SetLooping(bool shouldLoop)
     {
@@ -219,7 +224,7 @@ public class Script_SquashNStretch : MonoBehaviour
 
 
 
-    public void Setup(SquashStretchAxis axis, float time, float zeroMap, float oneMap, AnimationCurve curve,
+   /* public void Setup(SquashStretchAxis axis, float time, float zeroMap, float oneMap, AnimationCurve curve,
         bool loop, float delay, bool playImmediately = false)
     {
         axisToAffect = axis;
@@ -235,5 +240,5 @@ public class Script_SquashNStretch : MonoBehaviour
         if (playImmediately)
             CheckForAndStartCoroutine();
              PlayParticle();
-    }
+    }*/
 }

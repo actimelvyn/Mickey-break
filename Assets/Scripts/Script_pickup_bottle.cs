@@ -5,9 +5,13 @@ using UnityEngine;
 public class Script_PickUp_bottle : MonoBehaviour
 {
     // l'objet doit avoir les 3 materiels et avoir le tag BW
-    public GameObject LightOnPlayer;
+    public GameObject PostProcessVolume;
     public GameObject PickUpText;
     public bool drank;
+    public Animator bottleAnim;
+    public GameObject bottle;
+
+    public float delayBeforEffect = 5f; // Delay in seconds before breaking
 
     //[System.Serializable]
     /*public class TargetObject
@@ -23,7 +27,7 @@ public class Script_PickUp_bottle : MonoBehaviour
 
     void Start()
     {
-        LightOnPlayer.SetActive(false);
+        PostProcessVolume.SetActive(false);
         PickUpText.SetActive(false);
         drank = false;
 
@@ -66,11 +70,9 @@ public class Script_PickUp_bottle : MonoBehaviour
 
             if (Input.GetKey(KeyCode.E))
             {
-                // Deactivate the pickup object
-                this.gameObject.SetActive(false);
+                bottleAnim.SetTrigger("drink"); // Trigger the vase animation
+                StartCoroutine(DrinkEffectAfterDelay()); // Start the breaking vase coroutine
 
-                // Activate the light
-                LightOnPlayer.SetActive(true);
 
                 // Hide the pickup text
                 PickUpText.SetActive(false);
@@ -103,5 +105,19 @@ public class Script_PickUp_bottle : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         PickUpText.SetActive(false);
+    }
+
+    private IEnumerator DrinkEffectAfterDelay()
+    {
+        // Wait for the specified delay
+        yield return new WaitForSeconds(delayBeforEffect);
+        Debug.Log("Apply post Process after delay");
+        // Deactivate the pickup object
+        if (bottle != null) this.gameObject.SetActive(false);
+        // Activate the light
+        if (PostProcessVolume != null) PostProcessVolume.SetActive(true);
+
+        // Optionally destroy this script
+        Destroy(this); // Removes the script from the GameObject
     }
 }
