@@ -63,6 +63,7 @@ public class Script_SquashNStretch : MonoBehaviour
 
     [Header("VFX Settings")]
     [SerializeField] VisualEffect _smokePoof;
+    VFXEventAttribute eventAttribute;
 
     //Awaken or Disable Coroutine if multiple Coroutine are present on object
 
@@ -99,7 +100,7 @@ public class Script_SquashNStretch : MonoBehaviour
     {
         if (playOnStart)
             CheckForAndStartCoroutine();
-             PlayParticle();
+        _smokePoof.Play();
     }
 
     [ContextMenu("Play Squash and Stretch")]
@@ -109,9 +110,9 @@ public class Script_SquashNStretch : MonoBehaviour
             return;
 
         CheckForAndStartCoroutine();
-        PlayParticle();
+        //  PlayParticle();
     }
-    public void PlayParticle()
+   /* public void PlayParticle()
     {
         // instantiate
         VisualEffect newBurstEffect = Instantiate(_smokePoof, transform.position, transform.rotation);
@@ -121,7 +122,7 @@ public class Script_SquashNStretch : MonoBehaviour
 
         // destroy
         Destroy(newBurstEffect.gameObject, 1.5f);
-    }
+    } */
 
     //Start of the Coroutine
 
