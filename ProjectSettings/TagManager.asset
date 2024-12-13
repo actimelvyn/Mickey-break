@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cat
   - BW
+  - Joueur
   layers:
   - Default
   - TransparentFX

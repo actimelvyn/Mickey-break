@@ -10,39 +10,30 @@ public class Script_PickUp_bottle : MonoBehaviour
     public bool drank;
     public Animator bottleAnim;
     public GameObject bottle;
+    public SC_FPSController SC_FPSController;
 
-    public float delayBeforEffect = 5f; // Delay in seconds before breaking
-
-    //[System.Serializable]
-    /*public class TargetObject
-    {
-        public Renderer renderer;         // Renderer of the object
-        public bool useBothMaterials;     // Whether to apply both materials
-        [HideInInspector] public Material[] originalMaterials; // Stores the original materials
-    }*/
-
-    //public List<TargetObject> targetObjects; // List of objects with their material settings
-    public Material outlineBlack;
-    public Material outlineWhite;
-
+    public float delayBeforEffect = 5f; // Delay in seconds before 
     void Start()
     {
         PostProcessVolume.SetActive(false);
         PickUpText.SetActive(false);
         drank = false;
 
-
-        // Store original materials for all objects
-       /* foreach (TargetObject target in targetObjects)
+        if (SC_FPSController == null)
         {
-            if (target.renderer != null)
+            SC_FPSController = FindObjectOfType<SC_FPSController>();
+            if (SC_FPSController == null)
             {
-                target.originalMaterials = target.renderer.materials; // Store the current materials
+                Debug.LogError("SC_FPSController non trouvé dans la scène !");
             }
-        }*/
+        }
+        //SC_FPSController.canMove = false;
+        SC_FPSController.walkingSpeed = 0;
+        SC_FPSController.runningSpeed = 0;
+        SC_FPSController.jumpSpeed = 0;
 
 
-        GameObject[] bwObjects = GameObject.FindGameObjectsWithTag("BW");
+         GameObject[] bwObjects = GameObject.FindGameObjectsWithTag("BW");
 
         foreach (GameObject obj in bwObjects)
         {
@@ -75,7 +66,8 @@ public class Script_PickUp_bottle : MonoBehaviour
 
 
                 // Hide the pickup text
-                PickUpText.SetActive(false);
+                //PickUpText.SetActive(false);
+                Destroy(PickUpText);
 
                 drank = true;
 
@@ -93,7 +85,6 @@ public class Script_PickUp_bottle : MonoBehaviour
                             if (material.HasProperty("_Activator"))
                             {
                                 material.SetFloat("_Activator", 1.0f); // Set _Activator to true
-                                print("onn");
                             }
                         }
                     }
@@ -119,5 +110,9 @@ public class Script_PickUp_bottle : MonoBehaviour
 
         // Optionally destroy this script
         Destroy(this); // Removes the script from the GameObject
+        //SC_FPSController.canMove = true;
+        SC_FPSController.walkingSpeed = SC_FPSController.defwalkingSpeed;
+        SC_FPSController.runningSpeed = SC_FPSController.defrunningSpeed;
+        SC_FPSController.jumpSpeed = SC_FPSController.defjumpSpeed;
     }
 }

@@ -10,6 +10,7 @@ public class Script_PickUP_Key : MonoBehaviour
     public Animator vaseAnim;
     public GameObject fracturedVase;
     public GameObject intactVase;
+    public bool canOpenDoor;
 
     public float delayBeforeBreaking = 5f; // Delay in seconds before breaking
     private bool isBreaking = false;
@@ -19,6 +20,7 @@ public class Script_PickUP_Key : MonoBehaviour
         keyOnPlayer.SetActive(false); // Initially disable the key on the player
         PickUpText.SetActive(false); // Initially disable the pickup text
         interactable = false;        // Interaction flag set to false
+        canOpenDoor = false;
     }
 
     private void OnTriggerStay(Collider other)
@@ -43,7 +45,11 @@ public class Script_PickUP_Key : MonoBehaviour
 
                 PickUpText.SetActive(false); // Hide the pickup text
                 vaseAnim.SetTrigger("pick_up"); // Trigger the vase animation
-
+                canOpenDoor = true;
+                if (canOpenDoor == true)
+                {
+                    print("key!");
+                }
                 isBreaking = true; // Mark as breaking to prevent duplicate triggers
             }
         }
@@ -69,6 +75,9 @@ public class Script_PickUP_Key : MonoBehaviour
         if (fracturedVase != null) fracturedVase.SetActive(true);
 
         // Optionally destroy this script
-        Destroy(this); // Removes the script from the GameObject
+        //Destroy(this); // Removes the script from the GameObject
+        //this.gameObject.SetActive(false);
+        this.GetComponent<MeshRenderer>().enabled = false;
+    
     }
 }

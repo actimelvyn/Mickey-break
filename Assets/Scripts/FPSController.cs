@@ -6,9 +6,16 @@ using UnityEngine;
 
 public class SC_FPSController : MonoBehaviour
 {
-    public float walkingSpeed = 7.5f;
-    public float runningSpeed = 11.5f;
-    public float jumpSpeed = 8.0f;
+ 
+    public float walkingSpeed;
+    public float defwalkingSpeed = 7.5f;
+
+    public float runningSpeed;
+    public float defrunningSpeed = 11.5f;
+
+    public float jumpSpeed;
+    public float defjumpSpeed = 8.0f;
+
     public float gravity = 20.0f;
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
@@ -28,10 +35,12 @@ public class SC_FPSController : MonoBehaviour
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
     }
 
     void Update()
     {
+
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
