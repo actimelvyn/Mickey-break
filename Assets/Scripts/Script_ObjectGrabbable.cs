@@ -17,7 +17,7 @@ public class Script_ObjectGrabbable : MonoBehaviour
     {
         this.objectGrabPointTansform = objectGrabPointTansform;
         objectRigidbody.useGravity = false;
-        objectRigidbody.isKinematic = true;
+        objectRigidbody.isKinematic = false;
     }
 
     public void Drop()
@@ -31,11 +31,11 @@ public class Script_ObjectGrabbable : MonoBehaviour
     {
         if (objectGrabPointTansform != null)
         {
-           // objectRigidbody.freezeRotation = false;
-            //objectRigidbody.freezeposition = false;
+            objectRigidbody.freezeRotation = true;
+            //objectRigidbody.freezePosition = false;
 
 
-            float lerpSpeed = 10f;
+            float lerpSpeed = 8f;
             Vector3 newPosition = Vector3.Lerp(transform.position, objectGrabPointTansform.position, Time.deltaTime * lerpSpeed);
             objectRigidbody.MovePosition(newPosition);
         }
