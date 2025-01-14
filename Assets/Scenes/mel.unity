@@ -2326,8 +2326,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 7.5
+  defwalkingSpeed: 7.5
   runningSpeed: 11.5
+  defrunningSpeed: 11.5
   jumpSpeed: 8
+  defjumpSpeed: 8
   gravity: 20
   playerCamera: {fileID: 1303336396}
   lookSpeed: 2
@@ -3437,6 +3440,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1553663740551955101, guid: 98fadea16ebca3a40a9b2d0fb34d732b,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553663740551955101, guid: 98fadea16ebca3a40a9b2d0fb34d732b,
+        type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -4220,11 +4228,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da482cc22d7595644b4bfa9fd8fede95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightOnPlayer: {fileID: 1729749466}
+  PostProcessVolume: {fileID: 0}
   PickUpText: {fileID: 1392675417}
   drank: 0
-  outlineBlack: {fileID: 0}
-  outlineWhite: {fileID: 0}
+  bottleAnim: {fileID: 0}
+  bottle: {fileID: 0}
+  SC_FPSController: {fileID: 0}
+  delayBeforEffect: 5
 --- !u!4 &844417509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ec4bc422c8cc5846bc9d4008de15128,
@@ -11020,6 +11030,7 @@ MonoBehaviour:
   vaseAnim: {fileID: 1966127204}
   fracturedVase: {fileID: 1790683903}
   intactVase: {fileID: 1358531144}
+  canOpenDoor: 0
   delayBeforeBreaking: 2.5
 --- !u!1 &1729749466
 GameObject:
