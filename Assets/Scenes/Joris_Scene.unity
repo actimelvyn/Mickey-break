@@ -4817,6 +4817,8 @@ GameObject:
   - component: {fileID: 986159556}
   - component: {fileID: 986159555}
   - component: {fileID: 986159554}
+  - component: {fileID: 986159561}
+  - component: {fileID: 986159560}
   m_Layer: 3
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -4983,6 +4985,130 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986159552}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &986159560
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986159552}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 780e679d40f71bf49aa54b4691ae13e2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &986159561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986159552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d259f3e0e8b9c4680e77b146bc5287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  metalClips:
+  - {fileID: 8300000, guid: 780e679d40f71bf49aa54b4691ae13e2, type: 3}
+  - {fileID: 8300000, guid: f54070a767470544d892aca4b0063f08, type: 3}
+  - {fileID: 8300000, guid: 719db4453907f5342ac2d9b0afe379a9, type: 3}
+  - {fileID: 8300000, guid: a66719298a141dc4d83e9a7f52ec697a, type: 3}
+  hardwoodClips:
+  - {fileID: 8300000, guid: cd72cb1b776e24248be6e5e546a0a3ce, type: 3}
+  - {fileID: 8300000, guid: 1708b011337496c4e8ff96153f29c049, type: 3}
+  - {fileID: 8300000, guid: 795f0cd92dcf212479d27d71d4902f87, type: 3}
+  - {fileID: 8300000, guid: abbb8075a0b25ea448f382e852ccf92a, type: 3}
+  dirtClips: []
+  RayStart: {fileID: 986159553}
+  range: 3000
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &987141751
 GameObject:
   m_ObjectHideFlags: 0
@@ -4997,7 +5123,7 @@ GameObject:
   - component: {fileID: 987141756}
   m_Layer: 6
   m_Name: groundCell
-  m_TagString: Untagged
+  m_TagString: Hardwood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -10258,7 +10384,7 @@ GameObject:
   - component: {fileID: 1762390832}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: BW
+  m_TagString: Hardwood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

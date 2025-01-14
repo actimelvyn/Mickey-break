@@ -4772,7 +4772,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cd72cb1b776e24248be6e5e546a0a3ce, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4869,7 +4869,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d259f3e0e8b9c4680e77b146bc5287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metalClips: []
+  metalClips:
+  - {fileID: 8300000, guid: 780e679d40f71bf49aa54b4691ae13e2, type: 3}
+  - {fileID: 8300000, guid: f54070a767470544d892aca4b0063f08, type: 3}
+  - {fileID: 8300000, guid: 719db4453907f5342ac2d9b0afe379a9, type: 3}
+  - {fileID: 8300000, guid: a66719298a141dc4d83e9a7f52ec697a, type: 3}
   hardwoodClips:
   - {fileID: 8300000, guid: cd72cb1b776e24248be6e5e546a0a3ce, type: 3}
   - {fileID: 8300000, guid: 1708b011337496c4e8ff96153f29c049, type: 3}
@@ -9079,6 +9083,7 @@ GameObject:
   - component: {fileID: 1609097024}
   - component: {fileID: 1609097023}
   - component: {fileID: 1609097022}
+  - component: {fileID: 1609097026}
   m_Layer: 3
   m_Name: PlayerCam
   m_TagString: MainCamera
@@ -9226,6 +9231,27 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!95 &1609097026
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609097020}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f63d05ea42c245f4aa9cd702f558ba6b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1634527654
 GameObject:
   m_ObjectHideFlags: 0
