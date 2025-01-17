@@ -78,6 +78,7 @@ public class Script_PickUP_Key : MonoBehaviour
         //Destroy(this); // Removes the script from the GameObject
         //this.gameObject.SetActive(false);
         this.GetComponent<MeshRenderer>().enabled = false;
+        Destroy(PickUpText);
     
     }
 }

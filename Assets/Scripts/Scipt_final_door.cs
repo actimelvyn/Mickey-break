@@ -4,12 +4,15 @@ public class Script_Final_Door : MonoBehaviour
 {
     public Script_PickUP_Key keyPickup; 
     private Animator animator;          
-    private Collider doorCollider;      
+    private Collider doorCollider;
+    public GameObject intText;
+
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        doorCollider = GetComponent<Collider>(); 
+        doorCollider = GetComponent<Collider>();
+        intText.SetActive(false);
 
     }
 
@@ -26,6 +29,13 @@ public class Script_Final_Door : MonoBehaviour
         else if (other.CompareTag("Player") && keyPickup.canOpenDoor == false)
         {
             Debug.Log("Player triggered the door, but canOpenDoor is false.");
+            intText.SetActive(true);
+
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        intText.SetActive(false);
+
     }
 }
