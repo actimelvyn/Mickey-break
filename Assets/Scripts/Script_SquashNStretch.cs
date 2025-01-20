@@ -15,9 +15,9 @@ public class Script_SquashNStretch : MonoBehaviour
     [SerializeField, Range(0, 1f)] private float animationDuration = 0.25f;
     [SerializeField] private bool canBeOverwritten;
     [SerializeField] private bool playOnStart;
-    [SerializeField] private bool playsEveryTime = true;
-    [SerializeField, Range(0, 100f)] private float chanceToPlay = 100f;
-
+    [SerializeField] public bool playsEveryTime = false;
+    [SerializeField, Range(0, 100f)] private float chanceToPlay = 0f;
+    public bool canStretch = false;
     [Flags]
     public enum SquashStretchAxis
     {
