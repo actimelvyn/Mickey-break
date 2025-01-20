@@ -1366,7 +1366,8 @@ MonoBehaviour:
   castShadows: 0
   useExposureWeight: 0
   needsOwnSort: 0
-  shaderGraph: {fileID: 4333940904281232215, guid: e763db0e43ea087499e753469a430f17, type: 3}
+  shaderGraph: {fileID: 4333940904281232215, guid: e763db0e43ea087499e753469a430f17,
+    type: 3}
   materialSettings:
     m_PropertyNames:
     - _CastShadows

@@ -806,6 +806,7 @@ MonoBehaviour:
   playOnStart: 1
   playsEveryTime: 1
   chanceToPlay: 100
+  canStretch: 0
   initialScale: 1
   maximumScale: 1.1
   resetToInitialScaleAfterAnimation: 1
@@ -1085,6 +1086,7 @@ MonoBehaviour:
   playOnStart: 1
   playsEveryTime: 1
   chanceToPlay: 100
+  canStretch: 0
   initialScale: 1
   maximumScale: 1.1
   resetToInitialScaleAfterAnimation: 1
@@ -1286,6 +1288,7 @@ MonoBehaviour:
   bottle: {fileID: 160556069}
   SC_FPSController: {fileID: 0}
   delayBeforEffect: 3
+  squashNStretchObjects: []
 --- !u!65 &160556072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10470,6 +10473,7 @@ MonoBehaviour:
   playOnStart: 1
   playsEveryTime: 1
   chanceToPlay: 100
+  canStretch: 0
   initialScale: 1
   maximumScale: 1.2
   resetToInitialScaleAfterAnimation: 1
@@ -12438,6 +12442,7 @@ MonoBehaviour:
   playOnStart: 1
   playsEveryTime: 1
   chanceToPlay: 100
+  canStretch: 0
   initialScale: 1
   maximumScale: 1.1
   resetToInitialScaleAfterAnimation: 1
