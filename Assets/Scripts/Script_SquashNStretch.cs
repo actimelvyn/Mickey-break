@@ -146,7 +146,7 @@ public class Script_SquashNStretch : MonoBehaviour
 
     //All the calculations done to do the squash and strecht effect, capable of affecting multiple axis at once
 
-    private IEnumerator SquashAndStretchEffect()
+    public IEnumerator SquashAndStretchEffect()
     {
         do
         {
