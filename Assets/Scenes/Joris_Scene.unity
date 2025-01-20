@@ -1283,6 +1283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PostProcessVolume: {fileID: 1559045194}
   PickUpText: {fileID: 2117453117}
+  screenOut: {fileID: 2100000, guid: 1586e33995fed154e97012bd5c147fcf, type: 2}
   drank: 0
   bottleAnim: {fileID: 160556073}
   bottle: {fileID: 160556069}
@@ -1924,7 +1925,7 @@ PrefabInstance:
     - target: {fileID: 1348352593242344753, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
         type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1348352593242344753, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
         type: 3}
@@ -1935,7 +1936,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: c98366c5b2c4f594f8bc150f9db313fb, type: 2}
+      objectReference: {fileID: 2100000, guid: 81f085b43ed77e84da130df883457037, type: 2}
     - target: {fileID: 1535326344869730891, guid: ad7f5f0acdc6d18408303ba6f35c1f2b,
         type: 3}
       propertyPath: m_StaticEditorFlags
