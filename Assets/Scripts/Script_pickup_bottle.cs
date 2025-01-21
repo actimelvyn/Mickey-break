@@ -95,6 +95,7 @@ public class Script_PickUp_bottle : MonoBehaviour
         yield return new WaitForSeconds(delayBeforEffect);
         Debug.Log("Apply post-process effect after delay.");
 
+
         // Activate _Activator property for cached BW objects
         foreach (GameObject obj in bwObjects)
         {
@@ -111,6 +112,7 @@ public class Script_PickUp_bottle : MonoBehaviour
                 }
             }
         }
+
 
         // Hide the bottle
         if (bottle != null) bottle.SetActive(false);
