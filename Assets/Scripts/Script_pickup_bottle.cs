@@ -22,7 +22,11 @@ public class Script_PickUp_bottle : MonoBehaviour
         PostProcessVolume.SetActive(false);
         PickUpText.SetActive(false);
         drank = false;
-
+        if (screenOut.HasProperty("_Activator_out"))
+        {
+            screenOut.SetFloat("_Activator_out", 0f); // Set _Activator to false
+            Debug.Log("out end");
+        }
         // Find and cache SC_FPSController
         if (SC_FPSController == null)
         {

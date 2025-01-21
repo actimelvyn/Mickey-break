@@ -39,6 +39,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+<<<<<<< Updated upstream
+=======
+    - _Activator: 0
+    - _Activator_col: 1
+    - _Activator_out: 0
+>>>>>>> Stashed changes
     - _Color_Threshold: 0.6
     - _Normal_Treshold: 1
     - _OVERLAY: 1
