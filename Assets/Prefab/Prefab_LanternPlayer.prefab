@@ -150,7 +150,7 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1 &5302356280179693321
+--- !u!1 &8494966346393337555
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,9 +158,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8732485713795670815}
-  - component: {fileID: 1658230355241434638}
-  - component: {fileID: 1625119294354649782}
+  - component: {fileID: 8069394546299158039}
+  - component: {fileID: 5216593743962039590}
+  - component: {fileID: 1760741372500131823}
   m_Layer: 0
   m_Name: fire
   m_TagString: Untagged
@@ -168,34 +168,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8732485713795670815
+--- !u!4 &8069394546299158039
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5302356280179693321}
+  m_GameObject: {fileID: 8494966346393337555}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0294, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.0008, y: 0.0368, z: -0.002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1835340792526916595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!2083052967 &1658230355241434638
+--- !u!2083052967 &5216593743962039590
 VisualEffect:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5302356280179693321}
+  m_GameObject: {fileID: 8494966346393337555}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 81355de95a6aca54bb084e5e6f82569b, type: 3}
   m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 1
+  m_InitialEventNameOverriden: 0
   m_StartSeed: 0
-  m_ResetSeedOnPlay: 0
+  m_ResetSeedOnPlay: 1
   m_AllowInstancing: 1
   m_ResourceVersion: 1
   m_PropertySheet:
@@ -221,14 +221,14 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
---- !u!73398921 &1625119294354649782
+--- !u!73398921 &1760741372500131823
 VFXRenderer:
   serializedVersion: 1
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5302356280179693321}
+  m_GameObject: {fileID: 8494966346393337555}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
@@ -292,7 +292,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 19f399190dfc9a54093ccb3ff06c5d89,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.147
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19f399190dfc9a54093ccb3ff06c5d89,
         type: 3}
@@ -385,8 +385,8 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 19f399190dfc9a54093ccb3ff06c5d89,
         type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8732485713795670815}
+      insertIndex: 0
+      addedObject: {fileID: 8069394546299158039}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 19f399190dfc9a54093ccb3ff06c5d89,
         type: 3}
       insertIndex: -1
