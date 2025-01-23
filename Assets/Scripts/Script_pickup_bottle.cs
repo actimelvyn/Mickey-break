@@ -7,14 +7,17 @@ public class Script_PickUp_bottle : MonoBehaviour
     // Public and serialized fields
     public GameObject PostProcessVolume;
     public GameObject PickUpText;
+    public Material screenOut;
+
     public bool drank;
     public Animator bottleAnim;
     public GameObject bottle;
     public SC_FPSController SC_FPSController;
     public float delayBeforEffect = 5f; // Delay in seconds before the effect
 
-    // Class-level variable for caching "BW" objects
+    // Class-level variables
     private GameObject[] bwObjects;
+    public Script_SquashNStretch[] squashNStretchObjects; // Array to store all SquashNStretch instances
 
     void Start()
     {
@@ -22,11 +25,7 @@ public class Script_PickUp_bottle : MonoBehaviour
         PostProcessVolume.SetActive(false);
         PickUpText.SetActive(false);
         drank = false;
-        if (screenOut.HasProperty("_Activator_out"))
-        {
-            screenOut.SetFloat("_Activator_out", 0f); // Set _Activator to false
-            Debug.Log("out end");
-        }
+
         // Find and cache SC_FPSController
         if (SC_FPSController == null)
         {
@@ -59,6 +58,13 @@ public class Script_PickUp_bottle : MonoBehaviour
                 }
             }
         }
+
+        // Find all Script_SquashNStretch instances in the scene
+        squashNStretchObjects = FindObjectsOfType<Script_SquashNStretch>();
+        foreach (var squashNStretch in squashNStretchObjects)
+        {
+            Debug.Log($"Found SquashNStretch on {squashNStretch.gameObject.name}");
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -77,8 +83,6 @@ public class Script_PickUp_bottle : MonoBehaviour
                 // Hide or destroy the pickup text
                 if (PickUpText != null) PickUpText.SetActive(false);
                 Destroy(PickUpText);
-
-
 
                 Debug.Log("Drinking started.");
             }
@@ -99,7 +103,13 @@ public class Script_PickUp_bottle : MonoBehaviour
         yield return new WaitForSeconds(delayBeforEffect);
         Debug.Log("Apply post-process effect after delay.");
 
-
+        foreach (var squashNStretch in squashNStretchObjects)
+        {
+            squashNStretch.playsEveryTime = true;
+            Debug.Log($"Enabled canStretch on {squashNStretch.gameObject.name}");
+            squashNStretch.PlaySquashAndStretch(); // Trigger squash and stretch
+            print("script bottle fini");
+        }
         // Activate _Activator property for cached BW objects
         foreach (GameObject obj in bwObjects)
         {
@@ -116,6 +126,13 @@ public class Script_PickUp_bottle : MonoBehaviour
                 }
             }
         }
+        if (screenOut.HasProperty("_Activator_out"))
+        {
+            screenOut.SetFloat("_Activator_out", 1.0f); // Set _Activator to true
+            Debug.Log("out black");
+        }
+        
+
 
 
         // Hide the bottle
@@ -131,6 +148,8 @@ public class Script_PickUp_bottle : MonoBehaviour
             SC_FPSController.runningSpeed = SC_FPSController.defrunningSpeed;
             SC_FPSController.jumpSpeed = SC_FPSController.defjumpSpeed;
         }
+
+      
 
         // Destroy this script if no longer needed
         Destroy(this);

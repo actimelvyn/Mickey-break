@@ -15,9 +15,9 @@ public class Script_SquashNStretch : MonoBehaviour
     [SerializeField, Range(0, 1f)] private float animationDuration = 0.25f;
     [SerializeField] private bool canBeOverwritten;
     [SerializeField] private bool playOnStart;
-    [SerializeField] private bool playsEveryTime = true;
-    [SerializeField, Range(0, 100f)] private float chanceToPlay = 100f;
-
+    [SerializeField] public bool playsEveryTime = false;
+    [SerializeField, Range(0, 100f)] private float chanceToPlay = 0f;
+    public bool canStretch = false;
     [Flags]
     public enum SquashStretchAxis
     {
@@ -61,10 +61,10 @@ public class Script_SquashNStretch : MonoBehaviour
     private static event Action _squashAndStretchAllObjectsLikeThis;
 
 
-    [Header("VFX Settings")]
+   /* [Header("VFX Settings")]
     [SerializeField] VisualEffect _smokePoof;
     VFXEventAttribute eventAttribute;
-
+   */
     //Awaken or Disable Coroutine if multiple Coroutine are present on object
 
     private void Awake()
@@ -100,7 +100,7 @@ public class Script_SquashNStretch : MonoBehaviour
     {
         if (playOnStart)
             CheckForAndStartCoroutine();
-        _smokePoof.Play();
+       // _smokePoof.Play();
     }
 
     [ContextMenu("Play Squash and Stretch")]
@@ -146,7 +146,7 @@ public class Script_SquashNStretch : MonoBehaviour
 
     //All the calculations done to do the squash and strecht effect, capable of affecting multiple axis at once
 
-    private IEnumerator SquashAndStretchEffect()
+    public IEnumerator SquashAndStretchEffect()
     {
         do
         {

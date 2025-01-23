@@ -39,15 +39,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-<<<<<<< Updated upstream
-=======
     - _Activator: 0
     - _Activator_col: 1
-    - _Activator_out: 0
->>>>>>> Stashed changes
+    - _Activator_out: 1
     - _Color_Threshold: 0.6
     - _Normal_Treshold: 1
     - _OVERLAY: 1
+    - _acticator_out: 1
     m_Colors:
     - _Outline_Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
